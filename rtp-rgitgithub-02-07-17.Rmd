@@ -17,19 +17,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Slides at http://rpubs.com/mine/rladies-git
 
-- R Packages that we will use today: `dplyr`, `ggplot2`, `rmarkdown`, `knir`, `DT`, `flexdashboards`
-
-```{r eval=FALSE}
-packages <- c("dplyr", "ggplot2", "rmarkdown", "knitr", 
-              "DT", "flexdashboards")
-install.packages(packages)
-lapply(packages, library, character.only = TRUE)
-```
-
-```{r}
-
-```
-
 
 # Git Background
 
@@ -41,13 +28,13 @@ lapply(packages, library, character.only = TRUE)
 
 ## Why version control?
 
-* Simple formal system for tracking all changes to a project
+- Simple formal system for tracking all changes to a project
 
-* Time machine for your projects
-    * Track blame and/or praise
-    * Remove the fear of breaking things
+- Time machine for your projects
+    - Track blame and/or praise
+    - Remove the fear of breaking things
 
-* Learning curve is steep, but when you need it you *REALLY* need it
+- Learning curve is steep, but when you need it you *REALLY* need it
 
 <br/>
 <br/>
@@ -61,20 +48,20 @@ Your closest collaborator is you six months ago, but you don't reply to emails.
 
 ## Why git?
 
-* Distributed
-    * Work online or offline
-    * Collaborate with large groups
+- Distributed
+    - Work online or offline
+    - Collaborate with large groups
 
-* Popular and Successful
-    * Active development
-    * Shiny new tools and ecosystems
-    * Fast
+- Popular and Successful
+    - Active development
+    - Shiny new tools and ecosystems
+    - Fast
 
-* Tracks any type of file
-    * Works best with text 
+- Tracks any type of file
+    - Works best with text 
 
-* Branching
-    * Smarter merges
+- Branching
+    - Smarter merges
 
 # Git Demo
 
@@ -94,16 +81,16 @@ Username tips:
 
 - Public repos are free
 - Free private repos for users and organizations in education, academic research, nonprofits, and charities
-  + Otherwise private repos for $
+    - Otherwise private repos for $
   
 ## R and RStudio
 
 Stay current!
 
 - R v3.3.2: https://cran.r-project.org/
-  + `sessionInfo()` to check your R version
+    - `sessionInfo()` to check your R version
 - RStudio v1.0.136: https://www.rstudio.com/products/rstudio/download/preview/
-  + Help -> About RStudio to check your RStudio version
+    - Help -> About RStudio to check your RStudio version
 
 ## The shell
 
@@ -181,7 +168,7 @@ In RStudio
 - File -> New Project...
 
 - Version Control
-  + If you don't see this option, see http://happygitwithr.com/rstudio-see-git.html#do-you-have-a-problem
+    - If you don't see this option, see http://happygitwithr.com/rstudio-see-git.html#do-you-have-a-problem
 
 - Git
 
@@ -190,16 +177,16 @@ In RStudio
 ## Making local changes, save, and commit
 
 - Edit the `README.md` file in RStudio
-  + Remove something from an existing line
-  + Add something to a new line
+    - Remove something from an existing line
+    - Add something to a new line
 
 - Go to the Git tab and view the Diff
 
 - Check box next to README.md to Stage: Makes git aware of the current version of both files, but we have not actually saved the changes yet.
 
 - Enter commit message
-  + Concise, but informative is best
-  + Ok if it's obvious, it will be easier to browse commit messages than diffs later
+    - Concise, but informative is best
+    - Ok if it's obvious, it will be easier to browse commit messages than diffs later
   
 - Hit Commit to save the changes (locally)
 
@@ -207,7 +194,7 @@ In RStudio
 ## Push your changes to GitHub and view
   
 - And finally Push
-  + You might be prompted for your GitHub username and password
+    - You might be prompted for your GitHub username and password
 
 - Go to your GitHub repo and view your commit history
 
@@ -229,9 +216,9 @@ In RStudio
 
 - Option 1: Temporarily store password in memory
 https://git-scm.com/docs/git-credential-cache
-  + Before you push run `git config credential.helper cache` in shell
-  + This will cache credentials for 15 minutes (900 seconds) by default
-  + `git config credential.helper 'cache --timeout=300'` reduces caching to 5 minutes
+    - Before you push run `git config credential.helper cache` in shell
+    - This will cache credentials for 15 minutes (900 seconds) by default
+    - `git config credential.helper 'cache --timeout=300'` reduces caching to 5 minutes
   
 - Option 2: Credential caching for HTTPS access
 http://happygitwithr.com/credential-caching.html#credential-caching
@@ -290,6 +277,6 @@ What if at the same time a collaborator was making changes to the same file?
 ## Acknowledgments
 Above materials are derived in part from the following sources:
 
-* Jenny Bryan - [Happy Git with R](http://happygitwithr.com/)
-* Karl Broman - [Wisc's Tools4RR](http://kbroman.org/Tools4RR/)
-* [Software Carpentry Project](http://software-carpentry.org/)
+- Jenny Bryan - [Happy Git with R](http://happygitwithr.com/)
+- Karl Broman - [Wisc's Tools4RR](http://kbroman.org/Tools4RR/)
+- [Software Carpentry Project](http://software-carpentry.org/)

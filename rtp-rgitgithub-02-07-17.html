@@ -104,13 +104,7 @@
 <ul>
 <li><p>All source code at <a href='https://github.com/rladies/rtp_20170209_rgitgithub' title=''>https://github.com/rladies/rtp_20170209_rgitgithub</a></p></li>
 <li><p>Slides at <a href='http://rpubs.com/mine/rladies-git' title=''>http://rpubs.com/mine/rladies-git</a></p></li>
-<li><p>R Packages that we will use today: <code>dplyr</code>, <code>ggplot2</code>, <code>rmarkdown</code>, <code>knir</code>, <code>DT</code>, <code>flexdashboards</code></p></li>
 </ul>
-
-<pre class = 'prettyprint lang-r'>packages &lt;- c(&quot;dplyr&quot;, &quot;ggplot2&quot;, &quot;rmarkdown&quot;, &quot;knitr&quot;, 
-              &quot;DT&quot;, &quot;flexdashboards&quot;)
-install.packages(packages)
-lapply(packages, library, character.only = TRUE)</pre>
 
 </article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Git Background</h2></hgroup><article  id="git-background">
 
@@ -191,8 +185,11 @@ Your closest collaborator is you six months ago, but you don&#39;t reply to emai
 
 <ul>
 <li>Public repos are free</li>
-<li>Free private repos for users and organizations in education, academic research, nonprofits, and charities</li>
+<li>Free private repos for users and organizations in education, academic research, nonprofits, and charities
+
+<ul>
 <li>Otherwise private repos for $</li>
+</ul></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>R and RStudio</h2></hgroup><article  id="r-and-rstudio">
@@ -200,10 +197,16 @@ Your closest collaborator is you six months ago, but you don&#39;t reply to emai
 <p>Stay current!</p>
 
 <ul>
-<li>R v3.3.2: <a href='https://cran.r-project.org/' title=''>https://cran.r-project.org/</a></li>
+<li>R v3.3.2: <a href='https://cran.r-project.org/' title=''>https://cran.r-project.org/</a>
+
+<ul>
 <li><code>sessionInfo()</code> to check your R version</li>
-<li>RStudio v1.0.136: <a href='https://www.rstudio.com/products/rstudio/download/preview/' title=''>https://www.rstudio.com/products/rstudio/download/preview/</a></li>
+</ul></li>
+<li>RStudio v1.0.136: <a href='https://www.rstudio.com/products/rstudio/download/preview/' title=''>https://www.rstudio.com/products/rstudio/download/preview/</a>
+
+<ul>
 <li>Help -&gt; About RStudio to check your RStudio version</li>
+</ul></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>The shell</h2></hgroup><article  id="the-shell">
@@ -280,8 +283,11 @@ $ git config --global --list</pre>
 
 <ul>
 <li><p>File -&gt; New Project&#8230;</p></li>
-<li>Version Control</li>
-<li><p>If you don&#39;t see this option, see <a href='http://happygitwithr.com/rstudio-see-git.html#do-you-have-a-problem' title=''>http://happygitwithr.com/rstudio-see-git.html#do-you-have-a-problem</a></p></li>
+<li>Version Control
+
+<ul>
+<li>If you don&#39;t see this option, see <a href='http://happygitwithr.com/rstudio-see-git.html#do-you-have-a-problem' title=''>http://happygitwithr.com/rstudio-see-git.html#do-you-have-a-problem</a></li>
+</ul></li>
 <li><p>Git</p></li>
 <li><p>Fill in Repository URL, project name (what you want the folder to be called locally), browse to where you want this folder to live</p></li>
 </ul>
@@ -289,23 +295,32 @@ $ git config --global --list</pre>
 </article></slide><slide class=''><hgroup><h2>Making local changes, save, and commit</h2></hgroup><article  id="making-local-changes-save-and-commit">
 
 <ul>
-<li>Edit the <code>README.md</code> file in RStudio</li>
+<li>Edit the <code>README.md</code> file in RStudio
+
+<ul>
 <li>Remove something from an existing line</li>
-<li><p>Add something to a new line</p></li>
+<li>Add something to a new line</li>
+</ul></li>
 <li><p>Go to the Git tab and view the Diff</p></li>
 <li><p>Check box next to README.md to Stage: Makes git aware of the current version of both files, but we have not actually saved the changes yet.</p></li>
-<li>Enter commit message</li>
+<li>Enter commit message
+
+<ul>
 <li>Concise, but informative is best</li>
-<li><p>Ok if it&#39;s obvious, it will be easier to browse commit messages than diffs later</p></li>
+<li>Ok if it&#39;s obvious, it will be easier to browse commit messages than diffs later</li>
+</ul></li>
 <li><p>Hit Commit to save the changes (locally)</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Push your changes to GitHub and view</h2></hgroup><article  id="push-your-changes-to-github-and-view">
 
 <ul>
-<li>And finally Push</li>
-<li><p>You might be prompted for your GitHub username and password</p></li>
-<li><p>Go to your GitHub repo and view your commit history</p></li>
+<li>And finally Push
+
+<ul>
+<li>You might be prompted for your GitHub username and password</li>
+</ul></li>
+<li>Go to your GitHub repo and view your commit history</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>What&#39;s with the yellow question marks?</h2></hgroup><article  id="whats-with-the-yellow-question-marks">
@@ -326,10 +341,13 @@ $ git config --global --list</pre>
 </article></slide><slide class=''><hgroup><h2>Already tired of entering your username and password?</h2></hgroup><article  id="already-tired-of-entering-your-username-and-password">
 
 <ul>
-<li>Option 1: Temporarily store password in memory <a href='https://git-scm.com/docs/git-credential-cache' title=''>https://git-scm.com/docs/git-credential-cache</a></li>
+<li>Option 1: Temporarily store password in memory <a href='https://git-scm.com/docs/git-credential-cache' title=''>https://git-scm.com/docs/git-credential-cache</a>
+
+<ul>
 <li>Before you push run <code>git config credential.helper cache</code> in shell</li>
 <li>This will cache credentials for 15 minutes (900 seconds) by default</li>
-<li><p><code>git config credential.helper &#39;cache --timeout=300&#39;</code> reduces caching to 5 minutes</p></li>
+<li><code>git config credential.helper &#39;cache --timeout=300&#39;</code> reduces caching to 5 minutes</li>
+</ul></li>
 <li><p>Option 2: Credential caching for HTTPS access <a href='http://happygitwithr.com/credential-caching.html#credential-caching' title=''>http://happygitwithr.com/credential-caching.html#credential-caching</a></p></li>
 <li><p>Option 3: Set up SSH keys <a href='http://happygitwithr.com/ssh-keys.html#ssh-keys' title=''>http://happygitwithr.com/ssh-keys.html#ssh-keys</a></p></li>
 </ul>
